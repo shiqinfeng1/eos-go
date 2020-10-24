@@ -485,7 +485,7 @@ func (api *API) GetProducers(ctx context.Context) (out *ProducersRespV2, err err
 	/*
 		+FC_REFLECT( eosio::chain_apis::read_only::get_producers_params, (json)(lower_bound)(limit) )
 		+FC_REFLECT( eosio::chain_apis::read_only::get_producers_result, (rows)(total_producer_vote_weight)(more) ); */
-	err = api.call("chain", "get_producers",  M{"limit": 21, "lower_bound": 0, "json": true}, &out)
+	err = api.call(ctx, "chain", "get_producers",  M{"limit": 21, "lower_bound": 0, "json": true}, &out)
 	return
 }
 func (api *API) GetBlockByNum(ctx context.Context, num uint32) (out *BlockResp, err error) {

@@ -474,14 +474,20 @@ func (api *API) GetScheduledTransactions(ctx context.Context) (out *ScheduledTra
 	return api.GetScheduledTransactionsWithBounds(ctx, "", 100)
 }
 
-func (api *API) GetProducers(ctx context.Context) (out *ProducersResp, err error) {
+// func (api *API) GetProducers(ctx context.Context) (out *ProducersResp, err error) {
+// 	/*
+// 		+FC_REFLECT( eosio::chain_apis::read_only::get_producers_params, (json)(lower_bound)(limit) )
+// 		+FC_REFLECT( eosio::chain_apis::read_only::get_producers_result, (rows)(total_producer_vote_weight)(more) ); */
+// 	err = api.call(ctx, "chain", "get_producers", nil, &out)
+// 	return
+// }
+func (api *API) GetProducers(ctx context.Context) (out *ProducersRespV2, err error) {
 	/*
 		+FC_REFLECT( eosio::chain_apis::read_only::get_producers_params, (json)(lower_bound)(limit) )
 		+FC_REFLECT( eosio::chain_apis::read_only::get_producers_result, (rows)(total_producer_vote_weight)(more) ); */
-	err = api.call(ctx, "chain", "get_producers", nil, &out)
+	err = api.call("chain", "get_producers",  M{"limit": 21, "lower_bound": 0, "json": true}, &out)
 	return
 }
-
 func (api *API) GetBlockByNum(ctx context.Context, num uint32) (out *BlockResp, err error) {
 	err = api.call(ctx, "chain", "get_block", M{"block_num_or_id": fmt.Sprintf("%d", num)}, &out)
 	//err = api.call("chain", "get_block", M{"block_num_or_id": num}, &out)

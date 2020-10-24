@@ -439,6 +439,23 @@ type Producer struct {
 type ProducersResp struct {
 	Producers []Producer `json:"producers"`
 }
+type AuthorityList struct {
+	ID  int
+   Auth Authority
+}
+type ProducerV2 struct {
+   Owner         string           `json:"owner"`
+   ProducerAuthority  []interface{}   `json:"producer_authority"`
+   URL string                     `json:"url"`
+   TotalVotes float64             `json:"total_votes,string"`
+   ProducerKey string             `json:"producer_key"`
+}
+
+type ProducersRespV2 struct {
+   Rows []ProducerV2 `json:"rows"`
+   TotalProducerVoteWeight float64  `json:"total_producer_vote_weight,string"`
+   More string  `json:"more"`
+}
 type GetActionsRequest struct {
 	AccountName AccountName `json:"account_name"`
 	Pos         Int64       `json:"pos"`

@@ -1,7 +1,7 @@
 package system
 
 import (
-	eos "github.com/eoscanada/eos-go"
+	eos "github.com/shiqinfeng1/eos-go"
 )
 
 // NewDelegateBW returns a `delegatebw` action that lives on the

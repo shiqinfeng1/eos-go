@@ -8,7 +8,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/eoscanada/eos-go/ecc"
+	"github.com/shiqinfeng1/eos-go/ecc"
 )
 
 type Signer interface {

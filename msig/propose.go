@@ -1,7 +1,7 @@
 package msig
 
 import (
-	eos "github.com/eoscanada/eos-go"
+	eos "github.com/shiqinfeng1/eos-go"
 )
 
 // NewPropose returns a `propose` action that lives on the

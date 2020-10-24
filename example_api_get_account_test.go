@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	eos "github.com/eoscanada/eos-go"
+	eos "github.com/shiqinfeng1/eos-go"
 )
 
 func ExampleAPI_GetAccount() {

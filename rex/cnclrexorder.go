@@ -1,7 +1,7 @@
 package rex
 
 import (
-	eos "github.com/eoscanada/eos-go"
+	eos "github.com/shiqinfeng1/eos-go"
 )
 
 func NewCancelREXOrder(owner eos.AccountName) *eos.Action {

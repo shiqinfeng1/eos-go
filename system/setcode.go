@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	eos "github.com/eoscanada/eos-go"
+	eos "github.com/shiqinfeng1/eos-go"
 )
 
 func NewSetContract(account eos.AccountName, wasmPath, abiPath string) (out []*eos.Action, err error) {

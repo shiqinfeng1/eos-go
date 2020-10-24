@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/eoscanada/eos-go/ecc"
+	"github.com/shiqinfeng1/eos-go/ecc"
 	"go.uber.org/zap"
 
 	"github.com/tidwall/gjson"

@@ -5,7 +5,7 @@ import (
 
 	"flag"
 
-	"github.com/eoscanada/eos-go/p2p"
+	"github.com/shiqinfeng1/eos-go/p2p"
 )
 
 var peer = flag.String("peer", "", "peer")

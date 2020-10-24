@@ -1,6 +1,6 @@
 package system
 
-import "github.com/eoscanada/eos-go"
+import "github.com/shiqinfeng1/eos-go"
 
 // NewUpdateAuth creates an action from the `eosio.system` contract
 // called `updateauth`.

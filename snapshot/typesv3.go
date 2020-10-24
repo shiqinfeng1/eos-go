@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/eoscanada/eos-go"
+	"github.com/shiqinfeng1/eos-go"
 )
 
 type TableIDObject struct {

@@ -7,7 +7,7 @@ import (
 	"reflect"
 	"strconv"
 
-	"github.com/eoscanada/eos-go/ecc"
+	"github.com/shiqinfeng1/eos-go/ecc"
 )
 
 /*

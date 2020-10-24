@@ -1,8 +1,8 @@
 package ship
 
 import (
-	"github.com/eoscanada/eos-go"
-	"github.com/eoscanada/eos-go/ecc"
+	"github.com/shiqinfeng1/eos-go"
+	"github.com/shiqinfeng1/eos-go/ecc"
 )
 
 // State History Plugin Requests

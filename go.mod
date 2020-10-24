@@ -1,4 +1,4 @@
-module github.com/eoscanada/eos-go
+module github.com/shiqinfeng1/eos-go
 
 go 1.13
 

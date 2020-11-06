@@ -485,7 +485,7 @@ func (api *API) GetProducers(ctx context.Context) (out *ProducersRespV2, err err
 	/*
 		+FC_REFLECT( eosio::chain_apis::read_only::get_producers_params, (json)(lower_bound)(limit) )
 		+FC_REFLECT( eosio::chain_apis::read_only::get_producers_result, (rows)(total_producer_vote_weight)(more) ); */
-	err = api.call(ctx, "chain", "get_producers", M{"limit": 21, "lower_bound": 0, "json": true}, &out)
+	err = api.call(ctx, "chain", "get_producers",  M{"limit": 21, "lower_bound": 0, "json": true}, &out)
 	return
 }
 func (api *API) GetBlockByNum(ctx context.Context, num uint32) (out *BlockResp, err error) {
@@ -500,19 +500,19 @@ func (api *API) GetBlockByNumOrID(ctx context.Context, query string) (out *Signe
 }
 
 type BlockData struct {
-	Timestamp         time.Time        `json:"timestamp,omitempty"`
-	Producer          string           `json:"producer,omitempty"`
-	Confirmed         int              `json:"confirmed,omitempty"`
-	Previous          string           `json:"previous,omitempty"`
-	TransactionMroot  string           `json:"transaction_mroot,omitempty"`
-	ActionMroot       string           `json:"action_mroot,omitempty"`
-	ScheduleVersion   int              `json:"schedule_version,omitempty"`
+	Timestamp         time.Time       `json:"timestamp,omitempty"`
+	Producer          string          `json:"producer,omitempty"`
+	Confirmed         int             `json:"confirmed,omitempty"`
+	Previous          string          `json:"previous,omitempty"`
+	TransactionMroot  string          `json:"transaction_mroot,omitempty"`
+	ActionMroot       string          `json:"action_mroot,omitempty"`
+	ScheduleVersion   int             `json:"schedule_version,omitempty"`
 	NewProducers      *json.RawMessage `json:"new_producers,omitempty"`
-	ProducerSignature string           `json:"producer_signature,omitempty"`
-	Transactions      []Transactions   `json:"transactions,omitempty"`
-	BlockID           string           `json:"id,omitempty"`
-	BlockNum          int              `json:"block_num,omitempty"`
-	RefBlockPrefix    uint64           `json:"ref_block_prefix,omitempty"`
+	ProducerSignature string `json:"producer_signature,omitempty"`
+	Transactions      []Transactions  `json:"transactions,omitempty"`
+	BlockID           string          `json:"id,omitempty"`
+	BlockNum          int             `json:"block_num,omitempty"`
+	RefBlockPrefix    uint64             `json:"ref_block_prefix,omitempty"`
 }
 
 type Trx struct {

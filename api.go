@@ -518,7 +518,7 @@ type BlockData struct {
 type Trx struct {
 	Id                    string
 	Signatures            []ecc.Signature
-	Compression           int
+	Compression           CompressionType
 	PackedContextFreeData string
 	ContextFreeData       []HexBytes
 	PackedTrx             string

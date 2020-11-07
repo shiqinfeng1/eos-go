@@ -500,7 +500,7 @@ func (api *API) GetBlockByNumOrID(ctx context.Context, query string) (out *Signe
 }
 
 type BlockData struct {
-	Timestamp         time.Time       `json:"timestamp,omitempty"`
+	Timestamp         BlockTimestamp  `json:"timestamp,omitempty"`
 	Producer          string          `json:"producer,omitempty"`
 	Confirmed         int             `json:"confirmed,omitempty"`
 	Previous          string          `json:"previous,omitempty"`

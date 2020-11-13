@@ -85,7 +85,7 @@ type jsonActionToServer struct {
 	Account       AccountName       `json:"account"`
 	Name          ActionName        `json:"name"`
 	Authorization []PermissionLevel `json:"authorization"`
-	Data          HexBytes          `json:"data,omitempty"`
+	Data          HexBytes          `json:"data"`
 }
 
 type jsonActionFromServer struct {
